@@ -10,14 +10,15 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(cLetter){
   const results = {};
+
   for (let letter of cLetter){
+
     if (results[letter]) {
       results[letter] += 1;
-      //console.log(results[letter] +letter);
     } else {
       results[letter] = 1;
-      //console.log(results[letter] + letter);
     }
+    
   }
   return results;
 };
