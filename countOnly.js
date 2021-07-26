@@ -7,18 +7,13 @@ const assertEqual = function(actual, expected) {
   }
 
 };
-//The function should report back how many instances of each string were found in the allItems array of strings.
-// Our function countOnly needs to return a proper report on all the strings found in the input array, and their respective counts. Therefore it will need to return an object that can represent the stats.
+
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    //console.log(item);
-    // inside the loop, 
-    // increment the counter for each item:
-    //   set a property with that string key to:
-    //     the value that was already there (or zero if nothing there) with 1 added to it.
+
     if (itemsToCount[item]) { 
       if (results[item]) {
         results[item] += 1;
@@ -26,8 +21,6 @@ const countOnly = function(allItems, itemsToCount) {
         results[item] = 1;
       }
     }
-
-
 
   }
   console.log(results);

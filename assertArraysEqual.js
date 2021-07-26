@@ -10,11 +10,11 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArrayEqual = function(actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   eqArrays ? console.log(`✅✅✅ Assertion Passed: ${actual} ==== ${expected}`) : console.log(`🔴🔴🔴 Assertation Failed: ${actual} !== ${expected}`);
 };
 
-assertArrayEqual(eqArrays([1, 2, 3], [1, 2, 3]),true);
-assertArrayEqual(eqArrays([1, 2, 3], [3, 2, 1]),false);
-assertArrayEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),true);
-assertArrayEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]),false);
+assertArraysEqual(eqArrays([1, 3, 3], [1, 2, 3]),true);
+assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]),false);
+assertArraysEqual(eqArrays(["1", "3", "3"], ["1", "2", "3"]),true);
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]),false);
