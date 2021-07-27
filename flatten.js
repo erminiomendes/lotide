@@ -1,15 +1,16 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
+const flatten = (array) => {
+  const flattenedArray = [];
+
+  for (let element of array) {
+    if (Array.isArray(element)) {
+      for (let subElement of element) {
+        flattenedArray.push(subElement);
+      }
+    } else {
+      flattenedArray.push(element);
     }
   }
-  return true;
+  return flattenedArray;
 };
 
-const assertArrayEqual = function(actual, expected) {
-  eqArrays ? console.log(`✅✅✅ Assertion Passed: ${actual} ==== ${expected}`) : console.log(`🔴🔴🔴 Assertation Failed: ${actual} !== ${expected}`);
-};
+module.exports = flatten;
